@@ -12,3 +12,17 @@ C:\Users\kauan\OneDrive\Área de Trabalho\teste\FinancialAnalysis\FinancialAnaly
 C:\Users\kauan\OneDrive\Área de Trabalho\teste\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\FinancialAnalysis.pdb
 C:\Users\kauan\OneDrive\Área de Trabalho\teste\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\FinancialAnalysis.genruntimeconfig.cache
 C:\Users\kauan\OneDrive\Área de Trabalho\teste\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\ref\FinancialAnalysis.dll
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\bin\Debug\net6.0\FinancialAnalysis.exe
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\bin\Debug\net6.0\FinancialAnalysis.deps.json
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\bin\Debug\net6.0\FinancialAnalysis.runtimeconfig.json
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\bin\Debug\net6.0\FinancialAnalysis.dll
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\bin\Debug\net6.0\FinancialAnalysis.pdb
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\FinancialAnalysis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\FinancialAnalysis.AssemblyInfoInputs.cache
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\FinancialAnalysis.AssemblyInfo.cs
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\FinancialAnalysis.csproj.CoreCompileInputs.cache
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\FinancialAnalysis.dll
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\refint\FinancialAnalysis.dll
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\FinancialAnalysis.pdb
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\FinancialAnalysis.genruntimeconfig.cache
+C:\Users\kauan\Desktop\vesatest\FinancialAnalysis\FinancialAnalysis\obj\Debug\net6.0\ref\FinancialAnalysis.dll

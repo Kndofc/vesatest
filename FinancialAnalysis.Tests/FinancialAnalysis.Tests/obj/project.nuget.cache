@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mHIN9Scmg6Vzm7rK4UzuVPf3JM58JCQXrnvrroT1wCBq3UIhRsQta4sFE7UrRcAXJiHNDshIX6liDAUaUjswjA==",
+  "dgSpecHash": "d2tKlv6ptY4HzKX1b+pWCP0RqcVVuC6X1slJWbo2y8RT2vrozg5oAjewjd/hO5P9ZghhEe9iQ3NjoeaMrvwVUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kauan\\OneDrive\\Área de Trabalho\\teste\\FinancialAnalysis.Tests\\FinancialAnalysis.Tests\\FinancialAnalysis.Tests.csproj",
+  "projectFilePath": "C:\\Users\\kauan\\Desktop\\vesatest\\FinancialAnalysis.Tests\\FinancialAnalysis.Tests\\FinancialAnalysis.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kauan\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\kauan\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

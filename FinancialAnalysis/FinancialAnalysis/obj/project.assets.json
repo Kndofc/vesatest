@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kauan\\OneDrive\\Área de Trabalho\\teste\\FinancialAnalysis\\FinancialAnalysis\\FinancialAnalysis.csproj",
+      "projectUniqueName": "C:\\Users\\kauan\\Desktop\\vesatest\\FinancialAnalysis\\FinancialAnalysis\\FinancialAnalysis.csproj",
       "projectName": "FinancialAnalysis",
-      "projectPath": "C:\\Users\\kauan\\OneDrive\\Área de Trabalho\\teste\\FinancialAnalysis\\FinancialAnalysis\\FinancialAnalysis.csproj",
+      "projectPath": "C:\\Users\\kauan\\Desktop\\vesatest\\FinancialAnalysis\\FinancialAnalysis\\FinancialAnalysis.csproj",
       "packagesPath": "C:\\Users\\kauan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kauan\\OneDrive\\Área de Trabalho\\teste\\FinancialAnalysis\\FinancialAnalysis\\obj\\",
+      "outputPath": "C:\\Users\\kauan\\Desktop\\vesatest\\FinancialAnalysis\\FinancialAnalysis\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
