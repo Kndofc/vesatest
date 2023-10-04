@@ -6,5 +6,7 @@ namespace FinancialAnalysis.Models
     {
         public string Name { get; set; }
         public List<FinancialRecord> Records { get; set; } = new List<FinancialRecord>();
+        public List<Asset> Assets { get; set; }
+        public List<Liability> Liabilities { get; set; }
     }
 }

@@ -23,6 +23,16 @@ namespace FinancialAnalysis.Services
             return CalculateTotalAmount(false);
         }
 
+        private decimal CalculateTotalAmount(bool isRevenue)
+        {
+            return _company.Records.Where(r => r.IsRevenue == isRevenue).Sum(r => r.Amount);
+        }
+
+        public decimal CalculateTotal(FinancialType type)
+        {
+            return _company.Records.Where(r => r.Type == type).Sum(r => r.Amount);
+        }
+
         public decimal CalculateNetProfit()
         {
             return CalculateTotalRevenues() - CalculateTotalExpenses();
@@ -31,43 +41,42 @@ namespace FinancialAnalysis.Services
         public decimal CalculateNetProfitMargin()
         {
             decimal revenues = CalculateTotalRevenues();
-            if (revenues == 0) return 0; 
+            if (revenues == 0) return 0; // Evitar divisão por zero
             return (CalculateNetProfit() / revenues) * 100;
+        }
+
+        public decimal CalculateTotalAssets()
+        {
+            return _company.Assets.Sum(a => a.Value);
+        }
+
+        public decimal CalculateTotalLiabilities()
+        {
+            return _company.Liabilities.Sum(l => l.Value);
+        }
+
+        public decimal CalculateCurrentAssets()
+        {
+            return _company.Assets.Where(a => a.IsCurrent).Sum(a => a.Value);
+        }
+
+        public decimal CalculateCurrentLiabilities()
+        {
+            return _company.Liabilities.Where(l => l.IsCurrent).Sum(l => l.Value);
         }
 
         public decimal CalculateCurrentRatio()
         {
-            var oneMonthAgo = DateTime.Now.AddMonths(-1);
-
-            decimal currentAssets = _company.Records
-                .Where(r => r.IsRevenue && r.Date > oneMonthAgo)
-                .Sum(r => r.Amount);
-
-            decimal currentLiabilities = _company.Records
-                .Where(r => !r.IsRevenue && r.Date > oneMonthAgo)
-                .Sum(r => r.Amount);
+            decimal currentAssets = CalculateCurrentAssets();
+            decimal currentLiabilities = CalculateCurrentLiabilities();
 
             if (currentLiabilities == 0)
             {
-                throw new InvalidOperationException("No se puede calcular la razón de liquidez corriente cuando los pasivos corrientes son cero.");
+                throw new InvalidOperationException("No se puede calcular el índice de liquidez cuando los pasivos corrientes son cero.");
             }
 
             return currentAssets / currentLiabilities;
         }
 
-        private decimal CalculateTotalAmount(bool isRevenue)
-        {
-            decimal total = 0;
-
-            foreach (var record in _company.Records)
-            {
-                if (record.IsRevenue == isRevenue)
-                {
-                    total += record.Amount;
-                }
-            }
-
-            return total;
-        }
     }
 }

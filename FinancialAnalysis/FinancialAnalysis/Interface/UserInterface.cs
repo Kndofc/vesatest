@@ -17,10 +17,13 @@ namespace FinancialAnalysis.Interface
 
             while (continueRunning)
             {
-                Console.WriteLine("elija una opción:");
-                Console.WriteLine("1. ver análisis financiero");
-                Console.WriteLine("2. agregar nuevo registro financiero");
-                Console.WriteLine("3. salir");
+                Console.WriteLine("Elija una opción:");
+                Console.WriteLine("1. Ver análisis financiero");
+                Console.WriteLine("2. Añadir nuevo registro financiero");
+                Console.WriteLine("3. Añadir nuevo activo");
+                Console.WriteLine("4. Añadir nuevo pasivo");
+                Console.WriteLine("5. Ver balance general");
+                Console.WriteLine("6. Salir");
 
                 string userOption = Console.ReadLine();
 
@@ -34,6 +37,17 @@ namespace FinancialAnalysis.Interface
                         company.Records.Add(newRecord);
                         break;
                     case "3":
+                        var newAsset = GetAssetData();
+                        company.Assets.Add(newAsset);
+                        break;
+                    case "4":
+                        var newLiability = GetLiabilityData();
+                        company.Liabilities.Add(newLiability);
+                        break;
+                    case "5":
+                        DisplayBalanceSheet(company, analysisService);
+                        break;
+                    case "6":
                         continueRunning = false;
                         break;
                     default:
@@ -71,13 +85,66 @@ namespace FinancialAnalysis.Interface
             return new FinancialRecord { Date = DateTime.Now, Concept = concept, Amount = amount, IsRevenue = isRevenue };
         }
 
+        public static Asset GetAssetData()
+        {
+            Console.Write("Ingrese el nombre del activo: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Ingrese el valor del activo: ");
+            decimal value = decimal.Parse(Console.ReadLine());
+
+            Console.Write("¿Es este activo corriente (s/n)? ");
+            bool isCurrent = Console.ReadLine().ToLower() == "s";
+
+            return new Asset { Name = name, Value = value, IsCurrent = isCurrent };
+        }
+
+        public static Liability GetLiabilityData()
+        {
+            Console.Write("Ingrese el nombre del pasivo: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Ingrese el valor del pasivo: ");
+            decimal value = decimal.Parse(Console.ReadLine());
+
+            Console.Write("¿Es este pasivo corriente (s/n)? ");
+            bool isCurrent = Console.ReadLine().ToLower() == "s";
+
+            return new Liability { Name = name, Value = value, IsCurrent = isCurrent };
+        }
+
+
         public static void DisplayFinancialAnalysis(Company company, FinancialAnalysisService analysisService)
         {
+            Console.WriteLine("ANÁLISE FINANCEIRA");
+            Console.WriteLine("---------------------");
+            Console.Write("Ingrese la fecha de inicio (yyyy-MM-dd): ");
+            DateTime startDate = DateTime.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese la fecha final (yyyy-MM-dd): ");
+            DateTime endDate = DateTime.Parse(Console.ReadLine());
+
             Console.WriteLine($"Ingresos Totales: {analysisService.CalculateTotalRevenues()}");
             Console.WriteLine($"Gastos Totales: {analysisService.CalculateTotalExpenses()}");
             Console.WriteLine($"Beneficio Neto: {analysisService.CalculateNetProfit()}");
             Console.WriteLine($"Margen de Beneficio Neto: {analysisService.CalculateNetProfitMargin()}%");
             Console.WriteLine($"Índice de Liquidez: {analysisService.CalculateCurrentRatio()}%");
+            Console.WriteLine("---------------------");
+        }
+
+        public static void DisplayBalanceSheet(Company company, FinancialAnalysisService analysisService)
+        {
+            Console.WriteLine($"Total de Activos: {analysisService.CalculateTotalAssets()}");
+            Console.WriteLine($"Activos Corrientes: {analysisService.CalculateCurrentAssets()}");
+            Console.WriteLine($"Pasivos Corrientes: {analysisService.CalculateCurrentLiabilities()}");
+            Console.WriteLine($"Total de Pasivos: {analysisService.CalculateTotalLiabilities()}");
+            Console.WriteLine("BALANÇO PATRIMONIAL");
+            Console.WriteLine("---------------------");
+            Console.WriteLine($"Total de Activos: {analysisService.CalculateTotalAssets()}");
+            Console.WriteLine($"- Activos Corrientes: {analysisService.CalculateCurrentAssets()}");
+            Console.WriteLine($"Total de Pasivos: {analysisService.CalculateTotalLiabilities()}");
+            Console.WriteLine($"- Pasivos Corrientes: {analysisService.CalculateCurrentLiabilities()}");
+            Console.WriteLine("---------------------");
         }
     }
 }
