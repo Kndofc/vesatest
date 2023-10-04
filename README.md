@@ -52,11 +52,5 @@ Aunque la herramienta actual satisface los requisitos básicos para el análisis
 
 8. **Tests Adicionales:**
    - Expandir la cobertura de pruebas para incluir tests de integración y de aceptación.
-   
-9. **Documentación:**
-   - Mejorar la documentación del código y proporcionar más ejemplos y uso de casos en el `README.md`.
-   
-10. **Rendimiento:**
-    - Optimizar el código para mejorar el rendimiento, especialmente cuando se manejan grandes conjuntos de datos.
 
 Estas mejoras potenciales permitirían que la herramienta se expandiera y se adaptara para satisfacer las necesidades cambiantes y los requisitos de una variedad más amplia de usuarios y casos de uso.
